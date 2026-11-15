@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ML Handbook",
+    "section": "",
+    "text": "Bem-vindo\nEste espaço reúne anotações visuais, intuições matemáticas e experimentos práticos em Inteligência Artificial e Aprendizado de Máquina.\nUse a barra lateral para navegar pelos módulos ou pressione Ctrl + K para pesquisar qualquer conceito.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>index.html</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/01-exemplo-visual.html",
+    "href": "capitulos/01-exemplo-visual.html",
+    "title": "2  Como usar este capítulo",
+    "section": "",
+    "text": "3 Exemplo: Regressão e Incerteza\nModelos preditivos estimam uma função f(x) a partir de dados ruidosos y = f(x) + \\epsilon.\n\n\\hat{y} = \\mathbb{E}[Y \\mid X = x]\n\n\n\n\n\n\n\nNote\n\n\n\nClique em Code acima do gráfico se quiser inspecionar ou copiar o script Python que gerou a visualização.\n\n\nimport numpy as np import plotly.graph_objects as go\nnp.random.seed(42) x = np.linspace(0, 10, 120) y_true = np.sin(x) * np.exp(-0.1 * x) y_obs = y_true + np.random.normal(0, 0.08, size=len(x))\nfig = go.Figure() fig.add_trace(go.Scatter(x=x, y=y_obs, mode=‘markers’, name=‘Observações’, marker=dict(opacity=0.6))) fig.add_trace(go.Scatter(x=x, y=y_true, mode=‘lines’, name=‘Função Real f(x)’, line=dict(width=3))) fig.update_layout( title=“Sinal Subjacente vs. Dados Ruidosos”, xaxis_title=“Tempo (t)”, yaxis_title=“Valor”, template=“plotly_white” ) fig.show()",
+    "crumbs": [
+      "Módulo I: Fundamentos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Como usar este capítulo</span>"
+    ]
+  }
+]
