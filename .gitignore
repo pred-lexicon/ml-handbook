@@ -1,0 +1,5 @@
+﻿/.quarto/
+/_book/
+.venv/
+venv/
+__pycache__/

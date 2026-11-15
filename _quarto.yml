@@ -1,0 +1,28 @@
+﻿project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "ML Handbook"
+  subtitle: "Intuição, Matemática e Código"
+  author: "Pred Lexicon"
+  date: today
+  search: true
+  chapters:
+    - index.qmd
+    - part: "Módulo I: Fundamentos"
+      chapters:
+        - capitulos/01-exemplo-visual.qmd
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    toc: true
+    code-fold: true
+    code-tools: true
+    html-math-method: katex
+
+execute:
+  freeze: auto

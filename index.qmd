@@ -1,0 +1,5 @@
+﻿# Bem-vindo {.unnumbered}
+
+Este espaço reúne anotações visuais, intuições matemáticas e experimentos práticos em Inteligência Artificial e Aprendizado de Máquina.
+
+Use a barra lateral para navegar pelos módulos ou pressione **Ctrl + K** para pesquisar qualquer conceito.
