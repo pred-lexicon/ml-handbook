@@ -1,4 +1,4 @@
-﻿# Exemplo: Regressão e Incerteza
+# Exemplo: Regressão e Incerteza
 
 Modelos preditivos estimam uma função $f(x)$ a partir de dados ruidosos $y = f(x) + \epsilon$.
 

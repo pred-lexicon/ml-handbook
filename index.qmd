@@ -1,4 +1,4 @@
-﻿# Bem-vindo {.unnumbered}
+# Bem-vindo {.unnumbered}
 
 Este espaço reúne anotações visuais, intuições matemáticas e experimentos práticos em Inteligência Artificial e Aprendizado de Máquina.
 
