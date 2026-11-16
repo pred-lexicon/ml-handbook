@@ -16,8 +16,85 @@
     "section": "",
     "text": "Modelos preditivos estimam uma função f(x) a partir de dados ruidosos y = f(x) + \\epsilon.\n\n\\hat{y} = \\mathbb{E}[Y \\mid X = x]\n\n\n\n\n\n\n\nNoteComo usar este capítulo\n\n\n\nClique em Code acima do gráfico se quiser inspecionar ou copiar o script Python que gerou a visualização.\n\n\n\n\nCode\nimport numpy as np\nimport plotly.graph_objects as go\n\nnp.random.seed(42)\nx = np.linspace(0, 10, 120)\ny_true = np.sin(x) * np.exp(-0.1 * x)\ny_obs = y_true + np.random.normal(0, 0.08, size=len(x))\n\nfig = go.Figure()\nfig.add_trace(go.Scatter(x=x, y=y_obs, mode='markers', name='Observações', marker=dict(opacity=0.6)))\nfig.add_trace(go.Scatter(x=x, y=y_true, mode='lines', name='Função Real f(x)', line=dict(width=3)))\nfig.update_layout(\n    title=\"Sinal Subjacente vs. Dados Ruidosos\",\n    xaxis_title=\"Tempo (t)\",\n    yaxis_title=\"Valor\",\n    template=\"plotly_white\"\n)\nfig.show()",
     "crumbs": [
-      "Módulo I: Fundamentos",
+      "M?dulo I: Fundamentos e Estat?stica",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Regressão e Incerteza</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/02-distribuicoes-estimadores.html",
+    "href": "capitulos/02-distribuicoes-estimadores.html",
+    "title": "2  Distribui??es e Estimadores",
+    "section": "",
+    "text": "A infer?ncia estat?stica busca estimar par?metros desconhecidos \\theta de uma distribui??o geradora de dados P(X \\mid \\theta) a partir de uma amostra finita.\n\n\n\n\n\n\nNoteIdeia Central\n\n\n\nEnquanto a M?xima Verossimilhan?a (MLE) encontra o par?metro que maximiza a probabilidade dos dados observados, a abordagem Bayesiana (MAP) incorpora conhecimento pr?vio P(\\theta).\n\n\n\n\\hat{\\theta}_{\\text{MLE}} = \\arg\\max_{\\theta} \\sum_{i=1}^{N} \\log P(x_i \\mid \\theta)\n\nEm constru??o: adicionar compara??o visual entre vi?s e vari?ncia de estimadores.",
+    "crumbs": [
+      "M?dulo I: Fundamentos e Estat?stica",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Distribui??es e Estimadores</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/03-modelos-lineares-regularizacao.html",
+    "href": "capitulos/03-modelos-lineares-regularizacao.html",
+    "title": "3  Modelos Lineares e Regulariza??o",
+    "section": "",
+    "text": "Modelos lineares assumem que o alvo pode ser aproximado por uma combina??o linear das vari?veis de entrada, controlando o overfitting por meio de penaliza??es na norma dos pesos.\n\nRidge (L_2)Lasso (L_1)\n\n\nPenaliza o quadrado dos coeficientes (\\lambda \\|\\mathbf{w}\\|_2^2), encolhendo pesos correlacionados de forma suave sem zer?-los completamente.\n\n\nPenaliza o valor absoluto (\\lambda \\|\\mathbf{w}\\|_1), induzindo esparsidade e realizando sele??o autom?tica de vari?veis.\n\n\n\n\n\\mathcal{L}(\\mathbf{w}) = \\frac{1}{N} \\sum_{i=1}^{N} (y_i - \\mathbf{w}^\\top \\mathbf{x}_i)^2 + \\lambda \\|\\mathbf{w}\\|_p\n\nEm constru??o: adicionar contorno geom?trico comparando restri??es L_1 e L_2.",
+    "crumbs": [
+      "M?dulo II: Aprendizado Supervisionado",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Modelos Lineares e Regulariza??o</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/04-arvores-boosting.html",
+    "href": "capitulos/04-arvores-boosting.html",
+    "title": "4  ?rvores de Decis?o e Gradient Boosting",
+    "section": "",
+    "text": "Enquanto uma ?nica ?rvore particiona o espa?o de atributos de forma gulosa e sofre com alta vari?ncia, m?todos de ensemble combinam m?ltiplas ?rvores fracas para reduzir o erro.\n\n\n\n\n\n\nTipBagging vs. Boosting\n\n\n\n\nBagging (Random Forest): Treina ?rvores em paralelo em subamostras independentes para reduzir vari?ncia.\nBoosting (XGBoost / LightGBM): Treina ?rvores sequencialmente corrigindo os res?duos da etapa anterior para reduzir vi?s.\n\n\n\nEm constru??o: adicionar diagrama de fluxo do ajuste sequencial de res?duos.",
+    "crumbs": [
+      "M?dulo II: Aprendizado Supervisionado",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>?rvores de Decis?o e Gradient Boosting</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/05-decomposicao-estacionariedade.html",
+    "href": "capitulos/05-decomposicao-estacionariedade.html",
+    "title": "5  Decomposi??o e Estacionariedade",
+    "section": "",
+    "text": "Diferente de dados tabulares independentes, s?ries temporais possuem depend?ncia sequencial, tend?ncia (T_t), sazonalidade (S_t) e ru?do (R_t).\n\nY_t = T_t + S_t + R_t\n\n\n\n\n\n\n\nImportantAten??o na Valida??o\n\n\n\nNunca use valida??o cruzada aleat?ria (K-Fold comum) em s?ries temporais ? utilize janelas expansivas ou deslizantes (Time Series Split) para evitar vazamento de dados futuros.\n\n\nEm constru??o: adicionar visualiza??o de s?rie estacion?ria vs. n?o-estacion?ria.",
+    "crumbs": [
+      "M?dulo III: S?ries Temporais",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Decomposi??o e Estacionariedade</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-modelos-autoregressivos-ml.html",
+    "href": "capitulos/06-modelos-autoregressivos-ml.html",
+    "title": "6  Modelos Autoregressivos e ML em S?ries",
+    "section": "",
+    "text": "A previs?o de m?ltiplos passos ? frente pode ser abordada por modelos estat?sticos cl?ssicos (ARIMA, ETS) ou transformando a s?rie em aprendizado supervisionado via lags (atrasos temporais).\n\nEstrat?gia RecursivaEstrat?gia Direta\n\n\nTreina um ?nico modelo para prever t+1 e realimenta a pr?pria previs?o como entrada para t+2, \\dots, t+H.\n\n\nTreina um modelo dedicado para cada horizonte h \\in \\{1, \\dots, H\\}, evitando o ac?mulo de erro recursivo.\n\n\n\nEm constru??o: adicionar esquema visual de janelamento deslizante (sliding window).",
+    "crumbs": [
+      "M?dulo III: S?ries Temporais",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Modelos Autoregressivos e ML em S?ries</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/07-intervalos-predicao.html",
+    "href": "capitulos/07-intervalos-predicao.html",
+    "title": "7  Intervalos de Predi??o e Incerteza",
+    "section": "",
+    "text": "Previs?es pontuais n?o informam o risco associado ? decis?o. A quantifica??o de incerteza separa o erro em duas fontes principais:\n\nIncerteza Aleat?ria (Aleatoric): Ru?do intr?nseco dos dados, irredut?vel mesmo com mais amostras.\nIncerteza Epist?mica (Epistemic): Incerteza do modelo por falta de dados em determinadas regi?es do espa?o.\n\nEm constru??o: adicionar gr?fico comparando bandas de incerteza homoced?sticas e heteroced?sticas.",
+    "crumbs": [
+      "M?dulo IV: Quantifica??o de Incerteza",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Intervalos de Predi??o e Incerteza</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/08-conformal-prediction.html",
+    "href": "capitulos/08-conformal-prediction.html",
+    "title": "8  Conformal Prediction",
+    "section": "",
+    "text": "Conformal Prediction ? um arcabou?o agn?stico ao modelo que transforma previs?es pontuais em conjuntos ou intervalos de predi??o com garantia matem?tica de cobertura marginal 1 - \\alpha em amostras finitas.\n\n\\mathbb{P}\\left(Y_{n+1} \\in \\hat{C}(X_{n+1})\\right) \\geq 1 - \\alpha\n\n\n\n\n\n\n\nNotePremissa Fundamental\n\n\n\nA formula??o cl?ssica (Split Conformal) exige permutabilidade (exchangeability) entre os dados de calibra??o e teste ? em s?ries temporais din?micas, m?todos adaptativos ajustam o quantil ou o n?vel \\alpha_t ao longo do tempo.\n\n\nEm constru??o: adicionar diagrama do fluxo Treino \\rightarrow Calibra??o \\rightarrow Predi??o Conformal.",
+    "crumbs": [
+      "M?dulo IV: Quantifica??o de Incerteza",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Conformal Prediction</span>"
     ]
   }
 ]
