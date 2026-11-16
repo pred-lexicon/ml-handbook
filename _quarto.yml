@@ -1,18 +1,31 @@
-﻿project:
+project:
   type: book
   output-dir: _book
 
 book:
   title: "ML Handbook"
-  subtitle: "Intuição, Matemática e Código"
+  subtitle: "Intui??o, Matem?tica e C?digo"
   author: "Pred Lexicon"
   date: today
   search: true
   chapters:
     - index.qmd
-    - part: "Módulo I: Fundamentos"
+    - part: "M?dulo I: Fundamentos e Estat?stica"
       chapters:
         - capitulos/01-exemplo-visual.qmd
+        - capitulos/02-distribuicoes-estimadores.qmd
+    - part: "M?dulo II: Aprendizado Supervisionado"
+      chapters:
+        - capitulos/03-modelos-lineares-regularizacao.qmd
+        - capitulos/04-arvores-boosting.qmd
+    - part: "M?dulo III: S?ries Temporais"
+      chapters:
+        - capitulos/05-decomposicao-estacionariedade.qmd
+        - capitulos/06-modelos-autoregressivos-ml.qmd
+    - part: "M?dulo IV: Quantifica??o de Incerteza"
+      chapters:
+        - capitulos/07-intervalos-predicao.qmd
+        - capitulos/08-conformal-prediction.qmd
 
 format:
   html:

@@ -1,0 +1,11 @@
+# ?rvores de Decis?o e Gradient Boosting
+
+Enquanto uma ?nica ?rvore particiona o espa?o de atributos de forma gulosa e sofre com alta vari?ncia, m?todos de *ensemble* combinam m?ltiplas ?rvores fracas para reduzir o erro.
+
+::: {.callout-tip}
+## Bagging vs. Boosting
+- **Bagging (Random Forest):** Treina ?rvores em paralelo em subamostras independentes para **reduzir vari?ncia**.
+- **Boosting (XGBoost / LightGBM):** Treina ?rvores sequencialmente corrigindo os res?duos da etapa anterior para **reduzir vi?s**.
+:::
+
+*Em constru??o: adicionar diagrama de fluxo do ajuste sequencial de res?duos.*

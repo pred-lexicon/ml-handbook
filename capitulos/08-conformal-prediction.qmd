@@ -1,0 +1,14 @@
+# Conformal Prediction
+
+Conformal Prediction ? um arcabou?o agn?stico ao modelo que transforma previs?es pontuais em conjuntos ou intervalos de predi??o com garantia matem?tica de cobertura marginal $1 - \alpha$ em amostras finitas.
+
+$$
+\mathbb{P}\left(Y_{n+1} \in \hat{C}(X_{n+1})\right) \geq 1 - \alpha
+$$
+
+::: {.callout-note}
+## Premissa Fundamental
+A formula??o cl?ssica (*Split Conformal*) exige **permutabilidade (*exchangeability*)** entre os dados de calibra??o e teste ? em s?ries temporais din?micas, m?todos adaptativos ajustam o quantil ou o n?vel $\alpha_t$ ao longo do tempo.
+:::
+
+*Em constru??o: adicionar diagrama do fluxo Treino $\rightarrow$ Calibra??o $\rightarrow$ Predi??o Conformal.*

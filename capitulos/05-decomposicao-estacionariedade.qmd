@@ -1,0 +1,14 @@
+# Decomposi??o e Estacionariedade
+
+Diferente de dados tabulares independentes, s?ries temporais possuem depend?ncia sequencial, tend?ncia ($T_t$), sazonalidade ($S_t$) e ru?do ($R_t$).
+
+$$
+Y_t = T_t + S_t + R_t
+$$
+
+::: {.callout-important}
+## Aten??o na Valida??o
+Nunca use valida??o cruzada aleat?ria (*K-Fold* comum) em s?ries temporais ? utilize janelas expansivas ou deslizantes (*Time Series Split*) para evitar vazamento de dados futuros.
+:::
+
+*Em constru??o: adicionar visualiza??o de s?rie estacion?ria vs. n?o-estacion?ria.*

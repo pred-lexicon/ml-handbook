@@ -1,0 +1,45 @@
+# T?tulo do Conceito ou Modelo
+
+Resumo direto em 2 linhas sobre o problema que esta t?cnica resolve e qual ? a sua intui??o principal.
+
+::: {.callout-tip}
+## Resumo R?pido (Quando usar)
+- **Ideal quando:** ...
+- **Evite quando:** ...
+- **Complexidade / Custo:** ...
+:::
+
+## Vis?o Geral e Fluxo
+
+<!-- Salve seus diagramas do Excalidraw na pasta imagens/ como .svg e descomente a linha abaixo -->
+<!-- ![Fluxo do modelo](../imagens/nome-do-diagrama.svg){width="85%"} -->
+
+::: {.panel-tabset}
+## Intui??o Visual
+Explique aqui o funcionamento passo a passo sem excesso de formalismo.
+
+## Formula??o Matem?tica
+Escreva aqui a fun??o objetivo ou equa??o principal:
+
+$$
+\hat{y} = f(x; \theta)
+$$
+
+## Pr?s e Contras
+| Vantagens | Limita??es |
+| :--- | :--- |
+| Ponto forte 1 | Ponto fraco 1 |
+| Ponto forte 2 | Ponto fraco 2 |
+:::
+
+## Experimento Interativo
+
+```{python}
+import numpy as np
+import plotly.graph_objects as go
+
+x = np.linspace(0, 10, 100)
+fig = go.Figure(go.Scatter(x=x, y=np.sin(x), mode="lines", name="Exemplo"))
+fig.update_layout(template="plotly_white", title="Visualiza??o do Modelo")
+fig.show()
+```

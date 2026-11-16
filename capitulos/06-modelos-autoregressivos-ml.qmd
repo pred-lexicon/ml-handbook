@@ -1,0 +1,13 @@
+# Modelos Autoregressivos e ML em S?ries
+
+A previs?o de m?ltiplos passos ? frente pode ser abordada por modelos estat?sticos cl?ssicos (ARIMA, ETS) ou transformando a s?rie em aprendizado supervisionado via *lags* (atrasos temporais).
+
+::: {.panel-tabset}
+## Estrat?gia Recursiva
+Treina um ?nico modelo para prever $t+1$ e realimenta a pr?pria previs?o como entrada para $t+2, \dots, t+H$.
+
+## Estrat?gia Direta
+Treina um modelo dedicado para cada horizonte $h \in \{1, \dots, H\}$, evitando o ac?mulo de erro recursivo.
+:::
+
+*Em constru??o: adicionar esquema visual de janelamento deslizante (sliding window).*

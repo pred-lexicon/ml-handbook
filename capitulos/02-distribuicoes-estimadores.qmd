@@ -1,0 +1,14 @@
+# Distribui??es e Estimadores
+
+A infer?ncia estat?stica busca estimar par?metros desconhecidos $\theta$ de uma distribui??o geradora de dados $P(X \mid \theta)$ a partir de uma amostra finita.
+
+::: {.callout-note}
+## Ideia Central
+Enquanto a **M?xima Verossimilhan?a (MLE)** encontra o par?metro que maximiza a probabilidade dos dados observados, a abordagem **Bayesiana (MAP)** incorpora conhecimento pr?vio $P(\theta)$.
+:::
+
+$$
+\hat{\theta}_{\text{MLE}} = \arg\max_{\theta} \sum_{i=1}^{N} \log P(x_i \mid \theta)
+$$
+
+*Em constru??o: adicionar compara??o visual entre vi?s e vari?ncia de estimadores.*

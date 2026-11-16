@@ -1,0 +1,8 @@
+# Intervalos de Predi??o e Incerteza
+
+Previs?es pontuais n?o informam o risco associado ? decis?o. A quantifica??o de incerteza separa o erro em duas fontes principais:
+
+- **Incerteza Aleat?ria (*Aleatoric*):** Ru?do intr?nseco dos dados, irredut?vel mesmo com mais amostras.
+- **Incerteza Epist?mica (*Epistemic*):** Incerteza do modelo por falta de dados em determinadas regi?es do espa?o.
+
+*Em constru??o: adicionar gr?fico comparando bandas de incerteza homoced?sticas e heteroced?sticas.*

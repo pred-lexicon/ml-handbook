@@ -1,0 +1,17 @@
+# Modelos Lineares e Regulariza??o
+
+Modelos lineares assumem que o alvo pode ser aproximado por uma combina??o linear das vari?veis de entrada, controlando o *overfitting* por meio de penaliza??es na norma dos pesos.
+
+::: {.panel-tabset}
+## Ridge ($L_2$)
+Penaliza o quadrado dos coeficientes ($\lambda \|\mathbf{w}\|_2^2$), encolhendo pesos correlacionados de forma suave sem zer?-los completamente.
+
+## Lasso ($L_1$)
+Penaliza o valor absoluto ($\lambda \|\mathbf{w}\|_1$), induzindo esparsidade e realizando sele??o autom?tica de vari?veis.
+:::
+
+$$
+\mathcal{L}(\mathbf{w}) = \frac{1}{N} \sum_{i=1}^{N} (y_i - \mathbf{w}^\top \mathbf{x}_i)^2 + \lambda \|\mathbf{w}\|_p
+$$
+
+*Em constru??o: adicionar contorno geom?trico comparando restri??es $L_1$ e $L_2$.*
